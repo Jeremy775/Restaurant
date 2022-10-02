@@ -36,9 +36,6 @@
     </section>
 
     <?php
-    // require_once "models/Database.php";
-    // $a = new Database();
-    // $a->getPdo();
     require_once "models/User.php";
     $a = new User();
     $a->storeUser();

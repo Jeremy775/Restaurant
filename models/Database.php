@@ -7,9 +7,9 @@ class Database {
         $username = 'root';
         $password = '';
         try {
-            $pdo = new PDO("mysql:host=localhost;dbname=authphp", $username, $password);
+            $conn = new PDO("mysql:host=localhost;dbname=authphp", $username, $password);
             // echo "success";
-            return $pdo;
+            return $conn;
             
         } catch (PDOException $e) {
             die('Connection failed :'. $e->getMessage());

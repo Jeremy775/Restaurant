@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<?php
+    include('controllers/UserController.php');
+?>
+
     <section class="auth">
         
         <div class="signup">
             <h4>SIGN IN</h4>
             <p>Don't have an account yet ?</p>
-            <form action="models/User.php" method="POST">
+            <form action="controllers/UserController.php" method="POST">
                 <input type="text" name="name" placeholder="name">
                 <input type="password" name="pass" placeholder="password">
                 <input type="password" name="passrepeat" placeholder="repeat password">
@@ -34,11 +29,3 @@
         </div>
 
     </section>
-
-    <?php
-    require_once "models/User.php";
-    $a = new User();
-    $a->storeUser();
-    ?>
-</body>
-</html>
